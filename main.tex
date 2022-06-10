@@ -54,12 +54,11 @@
 \renewcommand{\cite}[2][]{}
 \renewcommand{\bibliography}[1]{}
 \renewcommand{\bibliographystyle}[1][]{}
-\title{Individual Development Plan 2021}
+\title{Individual Development Plan (June 2022)}
 \author{Will Dumm}
 
 \begin{document}
 \maketitle
-
 
 
 \section*{Career Goals}
@@ -73,81 +72,93 @@ This job will be:
     \item creative, not purely an application of technical skills
     \item related to a goal or cause that is important to me
 \end{itemize}
-Getting there will be mostly a journey of self-cultivation, rather than credentialing and experience building.
 My current position offers most of these characteristics already, but I can learn to take advantage of them better. For example, I can use my freedom in my position to be more creative about how I approach my projects.
 I think this long-term goal is achievable within the next ten years.
 
-\subsubsection*{This Year's Goals}
-Within the next year, my goal is to identify and execute a set of milestones for promotion in my position. These milestones will include:
+\subsubsection*{Last Year's Achievements}
 \begin{itemize}
-    \item Becoming a proficient c++ programmer
-    \item Building familiarity with relevant data formats and structures, such as the intricacies of variant calling format and the Usher Mutation Annotated Tree
-    \item Completion, at least in the scope of the history-DAG and parsimony, of the Parsimony Plateau paper as a coherent, well-rounded, and useful document
-    \item Implementation of useful applications of the history-DAG, including
+    \item Learned lots of background about phylogenetics and adjacent topics
+    \item Wrote a Python implementation of the history DAG
+    \item Wrote Parsimony Plateau paper on parsimony in the history DAG
+    \item Rewrote (parts of) \texttt{gctree} to utilize history DAG for expanded tree search, more efficient tree computations, and additional ranking criteria.
+    \item Began planning and writing paper describing improvements to gctree.
+    \item Familiarized myself with \texttt{Usher} and \texttt{matOptimize}, and helped get mutation annotated DAG (MAD) implementation started
+    \item Used \texttt{Usher} to verify that parsimony allows considerable tree uncertainty, at least for SARS-CoV-2 data.
+\end{itemize}
+\subsubsection*{This Year's Goals}
+\begin{itemize}
+    \item (from last year) Becoming a proficient c++ programmer
+    \item (help to) complete implementation of the MAD, integration with \texttt{matOptimize}, and parsimony tree search.
+    \item Implementation of (more) useful applications of the history DAG, including
         \begin{itemize}
-            \item a deep parsimony search using Usher utilities, applied to SARS-CoV-2 data.
-                It will be interesting to focus on how much better we can do than the `accepted' ancestral tree for SARS-CoV-2 constructed by Usher.
-            \item a useful application to GCTree inference, hopefully optimizing inference via the DAG structure.
+            \item a more general tree search motivated by an arbitrary weight function or likelihood, informed by context-sensitive model.
+            \item implementation in some form of the ideas described in the `conditional damara distribution' grant application.
         \end{itemize}
-    \item Progress in understanding and implementing the ideas described in the `conditional damara distribution' grant application.
+    \item Complete gctree v2 paper, with posterior predictive check, and simulation validation evaluating performance of gctree with hDAG, isotype- and mutability- parsimony compared to branching process likelihood alone.
+    \item Use hDAG to understand the shape of the  parsimony plateau, and develop ways to understand the shape of the hDAG in general. This will hopefully be another paper, with William's help.
+    \item Submit hDAG / Parsimony Plateau paper
+    \item Continue managing interns, making sure that tehy are productive and supported, and getting the experience they want, and learning what that takes.
 \end{itemize}
 
 \section*{Development of Project-Specific Knowledge}
 \subsubsection*{Project Description}
-My projects for the foreseeable future revolve around the description of a compact object (the history-DAG) capable of describing an ensemble of labeled trees, organized by associations of internal labels with leaf label paritions.
-In the near-term, this will involve exploring the properties of the history-DAG constructed on weighted trees, especially maximum parsimony trees.
-
-In the medium-term, I will focus on developing applications for this object.
-For example, properties of the history-DAG could be useful in expediting a search for maximally parsimonious trees.
-The history-DAG will likely also be useful in compactly expressing a large number of trees, both in the Bayesian setting of posterior distributions with large support, and perhaps also as a way of characterizing the space of all max-parsimony trees on fixed taxa.
-
-I will also explore ways to use the history-DAG to improve inference in the package GCTree.
-Immediate benefits may be realized by using the history-DAG to efficiently utilize a larger number of maximally parsimonious trees in the existing inference pipeline.
-It may also be possible to streamline GCTree inference algorithms by making use of the structure of the history-DAG.
-
-As a related project, I will seek to extend the group's work on the subsplit-DAG to allow use of the history-DAG or another new structure to constrain the search space in the variational inference problem described in the  `conditional damara distribution' grant application.
+My projects for the foreseeable future involve applications of the history-DAG, as described in the goals for this year.
 
 \subsubsection*{New Skills and Knowledge Gained}
 \begin{itemize}
     \item Biology background, including basic immunology and phylogenetics
-    \item Mathematical phylogenetic background, including parsimony, basic understanding of applications of MCMC and variational inference to Bayesian phylogenetics
+    \item Basic understanding of applications of MCMC and variational inference to Bayesian phylogenetics
+    \item Detailed understanding of parsimony and Fitch, Sankoff algorithms
     \item Re-familiarization with Python, DAG-related algorithms, shell, and cluster use
     \item Basic understanding of many of the group's projects
+    \item Familiarity with variational inference applied to phylogenetics
+    \item Extremely detailed understanding of \texttt{gctree} inference
 \end{itemize}
 \subsubsection*{Skills and Knowledge Needed}
-The following skills will be needed to tackle my projects:
+The following skills will be needed to make project progress:
 \begin{itemize}
-    \item Familiarization with c++, including basic knowledge, productive problem-specific idioms, and toolchain proficiency
-    \item More familiarity with variational inference applied to phylogenetics
-    \item More familiarity with the branching process model and how it's used in GCTree
+    \item Continued familiarization with c++
     \item Detailed understanding of the Usher MATUtils and MATOptimize codebase
-    \item Continued progress in understanding the history-DAG and its implications
+    \item Continued progress in understanding the limitations of the history DAG in our applications
+    \item Efficient, productive, and supportive intern management
 \end{itemize}
 
 \section*{Career Skills}
 
+\subsubsection*{Strengths}
+
 \subsubsection*{Communication Skills}
-So far, opportunities to practice and improve communications skills have been limited to writing and informal/impromptu verbal communication of project ideas and questions.
-I could improve my general readiness to explain project ideas without preparation.
-One way I may do this is by verbalizing each day a new idea that I've had during that day, even if just to myself.
-This will also help me prepare for more formal exercises in verbal communication, such as group meeting presentations.
+In my last IDP version, I identified ways in which I could improve my communication skills.
+There have been a few opportunities since then to present my project progress, for example in group meeting presentations and paper writing.
+However, I haven't meaningfully implemented my main proposal for improving communication skills, which I still think will be helpful:
+I should improve my general readiness to explain project ideas without preparation, for example by verbalizing each day a new idea that I had that day.
 
-The most immediate and accessible improvements in writing skills will be automatic, as I become more familiar with the notation and vocabulary that is most common in phylogenetics, and that works best with my project.
-I also intend to mindfully implement Erick's suggestions for writing from the group wiki.
 
-\subsubsection*{Other Opportunities for Improvement}
+\subsubsection*{Strengths and Other Opportunities for Improvement}
+
 I expect to improve my time management in this position:
 \begin{itemize}
     \item Keeping sight of immediate goals for each day or subproject, and staying on track
     \item Knowing better when to shift attention when progress on a task slows
     \item Having a more complete array of useful tasks in mind, and better recognizing directions with high potential for progress
+    \item (New) Better prioritizing tasks, especially by efficiently delegating appropriate tasks to interns, or deferring them in favor of those with higher immediate value
 \end{itemize}
 I can address the first two items by pausing to check in with my goals and progress throughout the day.
 The third can be helped by continuing to write down any ideas or questions that come up while working on other tasks.
 
+
+Other opportunities for improvement:
+\begin{itemize}
+    \item I would like to better anticipate how I can help collaborators, like Ognian and interns, instead of waiting for them to identify what they need from me.
+        Spending some time carefully thinking through their proposed tasks and making notes about key ideas and potential pitfalls will help with this.
+    \item I would like to take more time to think broadly about projects, brainstorm new project ideas, and communicating them to someone instead of letting them languish in my notes.
+    \item Finally, although code testing is already important to me, I'm not satisfied with the number of issues caused by my code this year.
+        I should force myself to spend more time testing even fairly informal scripts.
+    
+\end{itemize}
 \subsubsection*{Opportunities for Contacts and Collaboration}
-I am looking forward to communicating with authors of Usher about my project, when I have ideas that are ready to share, and questions that require their help.
-Erick also mentioned communicating with Mike Steel regarding parsimony on the history-DAG.
+I'm looking forward to continuing to work with interns.
+I also hope to learn a lot from Ognian as he continues to implement the MAD, and from the Usher team as we integrate \texttt{larch} and \texttt{matOptimize}.
 % \begin{figure}[h]
 % \centering
 % \includegraphics[width=0.35\textwidth]{figures/subsplit.pdf}
